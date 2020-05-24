@@ -10,11 +10,91 @@
   <script src="js/cssua.min.js"></script>
   <script>
     function calculate() {
-        var myname = $("#myname").val();
-        var myage = $("#myage").val();
-        var birthyear = new Date().getFullYear() - myage;
-        var text = myname + " was born in " + birthyear + "!";
-        alert(text);
+        var month = $("#month").val();
+        var days = $("#days").val();
+        var text;
+        switch (month){
+          case "1":
+           if(days <= 19 )
+             text = "やぎ座";
+           else
+             text = "みずがめ座";
+          break;
+          case "2":
+           if(days <= 18)
+             text = "みずがめ座";
+           else
+             text = "うお座";
+          break;
+          case "3":
+           if(days <= 20)
+             text = "うお座";
+           else
+             text = "ひつじ座";
+          break;
+          case "4":
+           if(days <= 19)
+             text = "おひつじ座";
+           else
+             text = "おうし座";
+          break;
+            
+          case "5":
+           if(days <= 20)
+             text = "おうし座";
+           else
+             text = "ふたご座";
+            
+          break;
+          case "6":
+           if(days <= 21)
+             text = "ふたご座";
+           else
+             text = "かに座";
+          break;
+          case "7":
+           if(days <= 22)
+             text = "かに座";
+           else
+             text = "しし座";
+          break;
+          case "8":
+           if(days <= 22)
+             text = "しし座";
+           else
+             text = "おとめ座";
+          break;
+          case "9":
+           if(days <= 22)
+             text = "おとめ座";
+           else
+             text = "てんびん座";
+          
+          break;
+          case "10":
+           if(days <= 23)
+             text = "てんびん座";
+           else
+             text = "さそり座";
+          break;
+
+          case "11":
+           if(days <= 22)
+             text = "さそり座";
+           else
+             text = "いて座";
+          
+          break;
+          
+          case "12":
+           if(days <= 21)
+             text = "いて座";
+           else
+             text = "やぎ座";
+          break;
+        }
+      //alert(text);
+      $("#result").text("あなたの星座は" + text + "です");
     }
   </script>
 </head>
@@ -24,16 +104,13 @@
       <h1>星座判定</h1>
     </header>
       <section data-role="content">
-
         月
-        <input type="text" id="myname" class="input-text">
+        <input type="text" id="month" class="input-text">
         
         日
-        <input type="text" id="myage" class="input-text">
-
+        <input type="text" id="days" class="input-text">
         <a class="button" onclick="calculate();">判定!</a>
-
-        
+        <div id="result"></div>
     </section>
   </div> 
 </body>
