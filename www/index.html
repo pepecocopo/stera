@@ -7,7 +7,6 @@
   <script src="components/loader.js"></script>
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/cssua.min.js"></script>
   <script>
     function calculate() {
         var month = $("#month").val();
@@ -99,8 +98,8 @@
   </script>
 </head>
 <body>
-  <div data-role="page" id="TopPage"> 
-    <header data-role="header" data-position="fixed" data-theme="c">
+  <div> 
+    <header data-role="header" data-position="fixed"  data-theme="c" >
       <h1>星座判定</h1>
     </header>
       <section data-role="content">
@@ -109,7 +108,9 @@
         
         日
         <input type="text" id="days" class="input-text">
-        <a class="button" onclick="calculate();">判定!</a>
+          
+  <a class="button" onclick="calculate();">判定！</a>
+
         <div id="result"></div>
     </section>
   </div> 
